@@ -67,6 +67,16 @@ museum:
     # 预约超时释放定时扫描间隔（毫秒）；重启后启动即补扫一次
     expire-scan-interval-ms: 60000
     expire-scan-on-startup: true
+  # 文物运输包装规格（museum-13）
+  pack:
+    # 修复系统通知补送定时扫描间隔（毫秒）；重启后启动即补扫一次
+    notify-scan-interval-ms: 60000
+    notify-scan-on-startup: true
+    restoration:
+      # 文物修复系统（外部依赖）通知端点；未配置时通知如实保持待送达，绝不假装成功
+      endpoint:
+      connect-timeout-ms: 2000
+      read-timeout-ms: 2000
 
 mybatis-plus:
   mapper-locations: classpath*:mapper/**/*.xml

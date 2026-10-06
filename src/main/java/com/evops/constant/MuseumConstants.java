@@ -509,4 +509,59 @@ public final class MuseumConstants {
     public static final String ACTION_INV_TASK_CLOSE = "INV_TASK_CLOSE";
     public static final String ACTION_INV_SUPPLEMENT = "INV_SUPPLEMENT";
     public static final String ACTION_INV_HALL_CLOSE = "INV_HALL_CLOSE";
+
+    // --------------------------------------------------------------------
+    // museum-13 文物运输包装规格
+    // --------------------------------------------------------------------
+
+    /** 包装规格版本状态：当前生效 / 已被新版本取代（只追加不改写） */
+    public static final String PACK_SPEC_ACTIVE = "ACTIVE";
+    public static final String PACK_SPEC_SUPERSEDED = "SUPERSEDED";
+
+    /** 气候区：温和 / 湿热 / 干旱 / 寒冷 */
+    public static final String CLIMATE_TEMPERATE = "TEMPERATE";
+    public static final String CLIMATE_TROPICAL = "TROPICAL";
+    public static final String CLIMATE_ARID = "ARID";
+    public static final String CLIMATE_COLD = "COLD";
+
+    /** 缓冲等级：L1 < L2 < L3（L3 缓冲最高） */
+    public static final String CUSHION_L1 = "L1";
+    public static final String CUSHION_L2 = "L2";
+    public static final String CUSHION_L3 = "L3";
+
+    /** 包装箱状态：已装箱 / 已发运 / 已拆箱 */
+    public static final String BOX_PACKED = "PACKED";
+    public static final String BOX_SHIPPED = "SHIPPED";
+    public static final String BOX_UNPACKED = "UNPACKED";
+
+    /** 拆箱回写包装状态：完好 / 受损 */
+    public static final String UNPACK_INTACT = "INTACT";
+    public static final String UNPACK_DAMAGED = "DAMAGED";
+
+    /** 临时替代包装审批状态：待审批 / 已批准 / 已驳回 */
+    public static final String SUB_PENDING = "PENDING";
+    public static final String SUB_APPROVED = "APPROVED";
+    public static final String SUB_REJECTED = "REJECTED";
+
+    /** 装箱照片阶段：装箱（发运前证据）/ 拆箱 */
+    public static final String PHOTO_PHASE_PACK = "PACK";
+    public static final String PHOTO_PHASE_UNPACK = "UNPACK";
+
+    /** 修复系统通知状态：待送达 / 已送达 */
+    public static final String NOTIFY_PENDING = "PENDING";
+    public static final String NOTIFY_SENT = "SENT";
+
+    /** 通知事件类型：包装规格版本发布 */
+    public static final String NOTIFY_EVENT_SPEC_PUBLISH = "PACK_SPEC_PUBLISH";
+
+    /** 包装台账流水动作 */
+    public static final String ACTION_PACK_SPEC_PUBLISH = "PACK_SPEC_PUBLISH";
+    public static final String ACTION_PACK_BOX_PACK = "PACK_BOX";
+    public static final String ACTION_PACK_SUB_APPLY = "PACK_SUB_APPLY";
+    public static final String ACTION_PACK_SUB_APPROVE = "PACK_SUB_APPROVE";
+    public static final String ACTION_PACK_SUB_REJECT = "PACK_SUB_REJECT";
+    public static final String ACTION_PACK_PHOTO_BIND = "PACK_PHOTO_BIND";
+    public static final String ACTION_PACK_BOX_SHIP = "PACK_BOX_SHIP";
+    public static final String ACTION_PACK_BOX_UNPACK = "PACK_BOX_UNPACK";
+    public static final String ACTION_PACK_NOTIFY_SENT = "PACK_NOTIFY_SENT";
 }

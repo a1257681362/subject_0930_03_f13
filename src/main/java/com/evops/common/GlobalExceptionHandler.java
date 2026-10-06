@@ -2,6 +2,7 @@ package com.evops.common;
 
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
+import com.evops.gateway.MuseumRepairUnavailableException;
 import org.springframework.dao.DuplicateKeyException;
 import org.springframework.validation.BindException;
 import org.springframework.validation.FieldError;
@@ -25,6 +26,12 @@ public class GlobalExceptionHandler {
     /** 文物修复权限已收紧：推进型动作（影像上传）停止 */
     @ExceptionHandler(PermissionClosedException.class)
     public ApiResponse<Void> handlePermissionClosed(PermissionClosedException ex) {
+        return ApiResponse.fail(ex.getMessage());
+    }
+
+    /** 博物馆文物修复外部依赖无响应：明确告知未送达，绝不包装成成功 */
+    @ExceptionHandler(MuseumRepairUnavailableException.class)
+    public ApiResponse<Void> handleRepairUnavailable(MuseumRepairUnavailableException ex) {
         return ApiResponse.fail(ex.getMessage());
     }
 

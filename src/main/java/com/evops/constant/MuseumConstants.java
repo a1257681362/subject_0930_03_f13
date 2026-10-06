@@ -509,4 +509,67 @@ public final class MuseumConstants {
     public static final String ACTION_INV_TASK_CLOSE = "INV_TASK_CLOSE";
     public static final String ACTION_INV_SUPPLEMENT = "INV_SUPPLEMENT";
     public static final String ACTION_INV_HALL_CLOSE = "INV_HALL_CLOSE";
+
+    // --------------------------------------------------------------------
+    // museum-13 文物运输包装规格
+    // --------------------------------------------------------------------
+
+    /** 包装规格版本状态：草稿 / 当前生效 / 已被新版本取代（只追加不改写） */
+    public static final String PACK_SPEC_DRAFT = "DRAFT";
+    public static final String PACK_SPEC_ACTIVE = "ACTIVE";
+    public static final String PACK_SPEC_SUPERSEDED = "SUPERSEDED";
+
+    /** 缓冲（防震）等级：L1 特级（防震最强，适用冲击限值最严）/ L2 标准 / L3 普通 */
+    public static final String CUSHION_L1 = "L1";
+    public static final String CUSHION_L2 = "L2";
+    public static final String CUSHION_L3 = "L3";
+
+    /** 气候区：温带 / 湿热 / 严寒 / 干燥 */
+    public static final String CLIMATE_TEMPERATE = "TEMPERATE";
+    public static final String CLIMATE_HOT_HUMID = "HOT_HUMID";
+    public static final String CLIMATE_COLD = "COLD";
+    public static final String CLIMATE_DRY = "DRY";
+
+    /** 装箱类型：按规格装箱 / 临时替代包装 */
+    public static final String PACK_STANDARD = "STANDARD";
+    public static final String PACK_SUBSTITUTE = "SUBSTITUTE";
+
+    /**
+     * 装箱单状态：
+     * PENDING_APPROVAL 替代待审批 / NOTIFY_PENDING 待外部依赖确认
+     * / PACKED 已装箱确认（可发运）/ UNPACKED 已拆箱 / REJECTED 替代被拒
+     */
+    public static final String PACK_ORDER_PENDING_APPROVAL = "PENDING_APPROVAL";
+    public static final String PACK_ORDER_NOTIFY_PENDING = "NOTIFY_PENDING";
+    public static final String PACK_ORDER_PACKED = "PACKED";
+    public static final String PACK_ORDER_UNPACKED = "UNPACKED";
+    public static final String PACK_ORDER_REJECTED = "REJECTED";
+
+    /** 替代包装审批状态 */
+    public static final String SUB_PENDING = "PENDING";
+    public static final String SUB_APPROVED = "APPROVED";
+    public static final String SUB_REJECTED = "REJECTED";
+
+    /** 装箱照片阶段：发运前装箱证据 / 拆箱后包装状态证据（两阶段分别只追加） */
+    public static final String PACK_PHOTO_BEFORE_SHIP = "BEFORE_SHIP";
+    public static final String PACK_PHOTO_AFTER_UNPACK = "AFTER_UNPACK";
+
+    /** 拆箱包装状态：完好 / 受损 */
+    public static final String UNPACK_INTACT = "INTACT";
+    public static final String UNPACK_DAMAGED = "DAMAGED";
+
+    /** 外部依赖通知状态：待投递 / 投递认领中 / 已送达（SENT 不重投） */
+    public static final String NOTIFY_PENDING = "PENDING";
+    public static final String NOTIFY_SENDING = "SENDING";
+    public static final String NOTIFY_SENT = "SENT";
+
+    /** 台账流水动作：规格发布/装箱/替代审批/外部通知/拆箱 */
+    public static final String ACTION_PACK_SPEC_PUBLISH = "PACK_SPEC_PUBLISH";
+    public static final String ACTION_PACK_STANDARD = "PACK_STANDARD";
+    public static final String ACTION_PACK_SUBSTITUTE_APPLY = "PACK_SUBSTITUTE_APPLY";
+    public static final String ACTION_PACK_SUBSTITUTE_APPROVE = "PACK_SUBSTITUTE_APPROVE";
+    public static final String ACTION_PACK_SUBSTITUTE_REJECT = "PACK_SUBSTITUTE_REJECT";
+    public static final String ACTION_PACK_NOTIFY_PENDING = "PACK_NOTIFY_PENDING";
+    public static final String ACTION_PACK_NOTIFY_SENT = "PACK_NOTIFY_SENT";
+    public static final String ACTION_PACK_UNPACK = "PACK_UNPACK";
 }
